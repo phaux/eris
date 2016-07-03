@@ -1,0 +1,40 @@
+{
+  "name": "eris",
+  "version": "0.0.0",
+  "description": "Bot software for Discord chat service",
+  "author": "phaux <phaux4@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phaux/eris"
+  },
+  "license": "MIT",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src -d lib",
+    "start": "babel src -d lib && node lib",
+    "test": "eslint src",
+    "watch": "concurrently 'babel src -d lib -w' 'nodemon lib'"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.9.1",
+    "camelcase": "^3.0.0",
+    "concat-stream": "^1.5.1",
+    "debug": "^2.2.0",
+    "node-fetch": "^1.5.2",
+    "pext": "^0.7.4",
+    "ws": "^1.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-eslint": "^6.1.0",
+    "babel-plugin-transform-es2015-destructuring": "^6.9.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.8.0",
+    "babel-plugin-transform-es2015-parameters": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "concurrently": "^2.1.0",
+    "eslint": "^2.13.1",
+    "eslint-plugin-babel": "^3.3.0",
+    "eslint-plugin-import": "^1.9.2",
+    "nodemon": "^1.9.2"
+  }
+}
