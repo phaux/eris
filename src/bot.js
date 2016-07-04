@@ -90,7 +90,7 @@ export class Bot extends EventEmitter {
       username: name,
       avatar:
         await fetch(`https://cdn.discordapp.com/app-icons/${id}/${icon}.jpg`)
-        .then(res => new Promise(ok => res.body.pipe(concat(ok))))
+        .then(res => new Promise(cb => res.body.pipe(concat(cb))))
         .then(buf => 'data:image/png;base64,' + buf.toString('base64')),
     })
     this.status.name = name
